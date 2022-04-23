@@ -3,6 +3,10 @@
 	B dd 21
 	ExitMsg db "Press Enter to Exit", 10 ; выводимое сообщение
 	lenExit equ $ - ExitMsg
+   var1 dw 25
+   var2 dd - 35
+   name db "Евгений/Eugene", 10
+
 	
 	val1 db 255
 	chart dw 256
