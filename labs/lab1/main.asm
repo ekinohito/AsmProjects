@@ -1,5 +1,8 @@
 	section .data                ; сегмент инициализированных переменных
 
+   F1 dw 65535
+   F2 dd 65535
+
    ; 25 00
    value1 dw 0x25
    value2 dw 37
@@ -44,6 +47,9 @@
 	section .text                ; сегмент кода
 	global _start
 _start:
+   add WORD    [F1], 1
+   add DWORD   [F2], 1
+
 	mov eax, [A]                 ; загрузить число A в регистр EAX
 	add eax, 5                   ; сложить EAX и 5, результат в EAX
 	sub eax, [B]                 ; вычесть число B, результат в EAX
