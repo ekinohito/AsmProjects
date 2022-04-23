@@ -1,4 +1,18 @@
 	section .data                ; сегмент инициализированных переменных
+
+   ; 25 00
+   value1 dw 0x25
+   value2 dw 37
+   value3 dw 45q
+   value4 dw 100101b
+
+   ; 00 25
+   reverse1 dw 0x2500
+   reverse2 dw 9472
+   reverse3 dw 22400q
+   reverse4 dw 10010100000000b
+
+
 	A dd - 30
 	B dd 21
 	ExitMsg db "Press Enter to Exit", 10 ; выводимое сообщение
