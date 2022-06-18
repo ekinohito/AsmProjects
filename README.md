@@ -1,3 +1,16 @@
+<style>
+    img {
+        background-color: white;
+        padding: 10px;
+        border-radius: 20px;
+        transition: all 0.5s;
+    }
+    img:hover {
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+</style>
+
 Гурьянов Евгений
 Вариант 7 (2.07)
 
@@ -7,12 +20,12 @@
 ## Лабораторная работа №2. Программирование целочисленных вычислений.
 Вычислить целочисленное выражение:
 
-<img src="2.png" style="background-color: white; padding: 10px; border-radius: 20px" height="100pt">
+<img src="imgs/1.png" height="100pt">
 
 ## Лабораторная работа №3. Программирование ветвлений и циклов.
 Вычислить целочисленное выражение:
 
-<img src="1.png" style="background-color: white; padding: 10px; border-radius: 20px" height="100pt">
+<img src="imgs/2.png" height="100pt">
 
 ## Лабораторная работа №4. Программирование обработки массивов и матриц.
 Дана матрица 4х6. Определить сумму элементов каждого столбца. Организовать ввод матрицы и вывод результатов.
