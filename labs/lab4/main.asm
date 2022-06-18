@@ -150,14 +150,6 @@ rows:
 	cmp edx, 24
 	jl cols
 	
-	
-	; =Выводим результат=
-	write_string ResultMsg, lenResult
-	mov rbx, 0
-	;int_to_str [result], OutBuf
-	mov rbx, rax
-	write_string OutBuf, rbx
-	
 	; write
 	mov rax, 1                   ; системная функция 1 (write)
 	mov rdi, 1                   ; дескриптор файла stdout=1
