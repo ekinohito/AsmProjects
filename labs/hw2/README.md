@@ -1,7 +1,7 @@
 ```bnf
-<statement> ::= <assignment> | <while> // выражение
+<statement> ::= <assignment> ";" | <while> ";"
 
-<assignment> ::= <var> "=" <expression> ";" // присваивание
+<assignment> ::= <var> "=" <expression> // присваивание
 
 <expression> ::= <var> | <integer> // выражение
 
@@ -9,7 +9,7 @@
 
 <natural> ::= <digit> | <digit> <natural> // натуральное число
 
-<while> ::= "while (" <var> ")" <statement> // цикл while
+<while> ::= "while(" <var> ")" <assignment> | "while(" <var> ")" <while> // цикл while
 
 <var> ::= <letter> <var_tail> // имя переменной (должно начинаться с буквы)
 
