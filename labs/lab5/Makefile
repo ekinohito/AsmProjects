@@ -12,5 +12,3 @@ run: $(TARGET)
 	./$(TARGET).run
 debug: $(TARGET)
 	edb --run $(TARGET).run
-report:
-	cd docs && pandoc -o report.docx report.md --highlight-style haddock

@@ -1,3 +1,7 @@
+# Домашнее задание №2
+
+## БНФ
+
 ```bnf
 <statement> ::= <assignment> ";" | <while> ";"
 
