@@ -1,17 +1,4 @@
-<style>
-    img {
-        background-color: white;
-        padding: 10px;
-        border-radius: 20px;
-        transition: all 0.5s;
-    }
-    img:hover {
-        border-radius: 10px;
-        transition: all 0.5s;
-    }
-</style>
-
-# Лабораторная работа №2
+# Лабораторная работа №3
 
 ## Выполнил Гурьянов Евгений
 
@@ -22,13 +9,16 @@ $$\text{Вариант 2.7}$$
 # Задача
 
 **Цель работы:**  
-изучение форматов машинных команд, команд целочисленной арифметики ассемблера и программирование целочисленных вычислений.
+изучение средств и приемов программирования ветвлений и итерационных циклов на языке ассемблера
 
 
 **Задача:**  
 Вычислить целочисленное выражение:
 
-$$ s = \frac{a * b}{2} - k + \frac{a}{3} - b $$
+$$ f = \begin{cases}
+   \frac{(k-5)^2}{r} &\text{если } k * a > 5 \\
+   8 - a &\text{иначе}
+\end{cases} $$
 
 # Основная часть
 
@@ -81,8 +71,8 @@ $$ s = \frac{a * b}{2} - k + \frac{a}{3} - b $$
 	InputPromptA db "a: "
 	lenInputPromptA equ $ - InputPromptA
 	
-	InputPromptB db "b: "
-	lenInputPromptB equ $ - InputPromptB
+	InputPromptR db "r: "
+	lenInputPromptR equ $ - InputPromptR
 	
 	InputPromptK db "k: "
 	lenInputPromptK equ $ - InputPromptK
@@ -101,7 +91,7 @@ $$ s = \frac{a * b}{2} - k + \frac{a}{3} - b $$
 	OutBuf resb 10                ; буфер для вводимой строки
 
 	a resw 1
-	b resw 1
+	r resw 1
 	k resw 1
 	result resw 1
 	
@@ -117,27 +107,29 @@ _start:
 	read_string InBuf, lenIn
 	str_to_int a
 
-	write_string InputPromptB, lenInputPromptB ; выводит b =
+	write_string InputPromptR, lenInputPromptR ; выводит r =
 	read_string InBuf, lenIn
-	str_to_int b
+	str_to_int r
 
 	write_string InputPromptK, lenInputPromptK ; выводит k =
 	read_string InBuf, lenIn
 	str_to_int k
 
 	; =Производим вычисления=
-	mov ax, [a]
-	imul word [b]
-	sar ax, 1
-	mov bx, ax
-	mov ax, [a]
-	mov cx, 3
-	idiv cx
-	add ax, bx
-	sub ax, [k]
-	sub ax, [b]
+	mov ax, [k]
+	imul word [a]
+	cmp ax, 5
+	jg first_branch
+	mov ax, 8
+	sub ax, [a]
+	jmp endif
+first_branch:
+	mov ax, [k]
+	sub ax, 5
+	imul ax
+	idiv word [r]
+endif:
 	mov [result], ax
-
 	; =Выводим результат=
 	write_string ResultMsg, lenResult
 	mov rbx, 0
@@ -161,7 +153,6 @@ _start:
 	mov rax, 60                  ; системная функция 60 (exit)
 	xor rdi, rdi                 ; return code 0
 	syscall                      ; вызов системной функции
-
 ```
 
 ## Пример работы программы
@@ -172,20 +163,24 @@ _start:
 
 ### Скрипт для проверки
 ```js
-function s(a, b, k) {
-    return Math.floor(a * b / 2) - k + Math.floor(a / 3 |0) - b 
-} 
+function f(a, r, k) {
+    if (k * a > 5) {
+        return Math.floor((k - 5) ** 2 / r)
+    } else {
+        return 8 - a
+    }
+}
 ```
 
-| a  | b | k  | Ожидание | Реальность |
-|----|---|----|----------|------------|
-| 1  | 2 | 3  | -4       | -4         |
-| 0  | 0 | 0  | 0        | 0          |
-| 1  | 1 | 1  | -2       | -2         |
-| -3 | 5 | 4  | -18      | -18        |
-| -1 | 2 | -1 | -2       | -2         |
+| a  | b | k | Ожидание | Реальность |
+|----|---|---|----------|------------|
+| 1  | 2 | 3 | 7        | 7          |
+| 0  | 0 | 0 | 8        | 8          |
+| 2  | 3 | 4 | 0        | 0          |
+| -3 | 5 | 4 | 11       | 11         |
+| 3  | 2 | 3 | 2        | 2          |
 
 
 **Вывод:**  
 
-В результате выполнения лабораторной работы была разработана программа, осуществляющая вычисление целочисленого выражения
+В результате выполнения лабораторной работы была разработана программа, осуществляющая вычисление целочисленого выражения c применением ветвления
