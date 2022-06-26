@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Jun 18 17:09:36 2022
+# Make data base, printed on Sun Jun 26 22:39:42 2022
 
 # Variables
 
@@ -20,7 +20,6 @@ VSCODE_GIT_ASKPASS_MAIN = /Applications/Visual Studio Code.app/Contents/Resource
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
- 
 # environment
 AWS_SECRET_ACCESS_KEY = bUrV8KJoKduLit5G2x6JXFJtJAjBcPjRfC6lZYSi
 # environment
@@ -177,6 +176,7 @@ TEAMCITY_TOKEN = eyJ0eXAiOiAiVENWMiJ9.Tm83T0o4UVc5QzBDaDZ6aFFyV1RVbHI5ekIw.MWE4M
 PYENV_VIRTUALENV_INIT = 1
 # default
 .INCLUDE_DIRS = /usr/local/include
+ 
 # environment
 VSCODE_GIT_IPC_HANDLE = /var/folders/m6/psv6n8c161x911l92y8hf9pmhtv7ct/T/vscode-git-29ad967e9d.sock
 # environment
@@ -194,9 +194,9 @@ VSCODE_PID = 2157
 
 # Directories
 
-# . (device 16777220, inode 13588055): 11 files, no impossibilities.
+# . (device 16777220, inode 13588055): 10 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 10 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -268,6 +268,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sat Jun 18 17:09:36 2022
+# Finished Make data base on Sun Jun 26 22:39:42 2022
 
  
