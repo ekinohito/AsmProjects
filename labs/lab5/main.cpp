@@ -3,36 +3,53 @@
 
 using namespace std;
 
-void find_most_freq_symb(int* freq)
-{
-    int max = 0;
-    for (int i=32; i<256; i++) // первый 31 символ ASCII - служебные
-    {
-        if (freq[i] > max)
-            max = freq[i];
-    }
-    cout << "The most frequent symbol(s): ";
-    for (int i=32; i<256; i++) // первый 31 символ ASCII - служебные
-    {
-        if (freq[i] == max)
-            cout << static_cast<char>(i) << " ";
-    }
-    cout << endl;
+void add_char(char c) {
+    cout << c;
 }
 
-extern void analyze(char* text, int* pointer);
+extern void add_char_wrapper(char c);
 
-int main()
-{
-    char text[255] = {};
-    int freq[256] = {0};
+int main() {
+    char input[255] = {};
     cout << "Enter the text:\n";
-    cin.getline(text, 255);
-    analyze(text, freq);
-    cout << "Frequency analysis of symbols:\n";
-    for (int i=32; i<256; i++) // первый 31 символ ASCII - служебные
-    {
-        if (freq[i] != 0)
-            cout << static_cast<char>(i) << " : " << freq[i] << "\t" << freq[i]/static_cast<float>(strlen(text)) << endl;
+    cin.getline(input, 255);
+    cout << "Enter how many words must be deleted?\n";
+    int n;
+    cin >> n;
+    cout << "Now enter word indexes one by row\n";
+    int indexes[129];
+    for (int i = 0; i < n; ++i) {
+        cin >> indexes[i];
+    }
+    indexes[n] = 9000;
+
+    // является ли текущая буква первой
+    bool is_first = true;
+    // нужно ли пропускать текущее слово
+    bool should_skip = false;
+    // индекс текущего слова
+    int current_index = 0;
+    // индекс следующего пропускаемого слова
+    int next_skippable_index = 0;
+
+    for (int i = 0; input[i] != '\0'; ++i) {
+        char c = input[i];
+        if (c == ' ') {
+            is_first = true;
+            add_char_wrapper(c);
+        } else {
+            if (is_first) {
+                is_first = false;
+                should_skip = false;
+                current_index += 1;
+                if (current_index == indexes[next_skippable_index]) {
+                    next_skippable_index += 1;
+                    should_skip = true;
+                }
+            }
+            if (!should_skip) {
+                add_char_wrapper(c);
+            }
+        }
     }
 }
