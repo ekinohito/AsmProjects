@@ -10,22 +10,16 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sun Jun 26 22:39:42 2022
+# Make data base, printed on Sat Sep  3 21:23:34 2022
 
 # Variables
 
-# environment
-VSCODE_GIT_ASKPASS_MAIN = /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
 # environment
 AWS_SECRET_ACCESS_KEY = bUrV8KJoKduLit5G2x6JXFJtJAjBcPjRfC6lZYSi
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-VSCODE_LOG_NATIVE = false
 # environment
 NVM_INC = /Users/emguryanov/.nvm/versions/node/v17.2.0/include/node
 # automatic
@@ -45,31 +39,22 @@ _ = /usr/bin/make
 # makefile
 MAKEFILE_LIST := 
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/m6/psv6n8c161x911l92y8hf9pmhtv7ct/T/vscode-ipc-b011d74b-fa0f-400f-ac2a-ca0a64886b77.sock
+VSCODE_CWD = /
 # environment
-VSCODE_CWD = /Users/emguryanov/Desktop/AsmProjects
-# environment
-PATH = /Users/emguryanov/.deta/bin:/Users/emguryanov/.pyenv/plugins/pyenv-virtualenv/shims:/usr/local/opt/openjdk/bin:/Users/emguryanov/.rbenv/shims:/Users/emguryanov/.nvm/versions/node/v17.2.0/bin:/Users/emguryanov/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/emguryanov/.deta/bin:/Users/emguryanov/.pyenv/plugins/pyenv-virtualenv/shims:/usr/local/opt/openjdk/bin:/Users/emguryanov/.rbenv/shims:/Users/emguryanov/.nvm/versions/node/v17.2.0/bin:/Users/emguryanov/.pyenv/shims:/Users/emguryanov/.cargo/bin
+PATH = /Users/emguryanov/.deta/bin:/Users/emguryanov/bin:/Users/emguryanov/.pyenv/plugins/pyenv-virtualenv/shims:/usr/local/opt/openjdk/bin:/Users/emguryanov/.rbenv/shims:/Users/emguryanov/.nvm/versions/node/v17.2.0/bin:/Users/emguryanov/.pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/emguryanov/.cargo/bin
 # environment
 NVM_BIN = /Users/emguryanov/.nvm/versions/node/v17.2.0/bin
 # environment
-LaunchInstanceID = CAC7F5A5-6DB0-4D66-90EE-1C2268893D94
-# environment
-VSCODE_LOG_STACK = false
-# environment
+ 
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Hf2dpWiKZw/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.WwsXWRkLYK/Listeners
 # automatic
 %F = $(notdir $%)
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /Users/emguryanov/Desktop/AsmProjects
 # environment
@@ -83,13 +68,9 @@ HOME = /Users/emguryanov
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CLI = 1
-# environment
-VSCODE_CODE_CACHE_PATH = /Users/emguryanov/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /Users/emguryanov/Library/Application Support/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
 LOGNAME = emguryanov
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 NVM_CD_FLAGS = -q
 # environment
@@ -97,17 +78,13 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-MAKELEVEL := 0
-# environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 5
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -120,10 +97,6 @@ USER = emguryanov
 AWS_ACCESS_KEY_ID = bjnurdLJf2paxQ4KRZ85
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# environment
-VSCODE_GIT_ASKPASS_EXTRA_ARGS = --ms-enable-electron-run-as-node
-# environment
-TERM_PROGRAM = vscode
 # default
 .VARIABLES := 
 # environment
@@ -131,9 +104,9 @@ TMPDIR = /var/folders/m6/psv6n8c161x911l92y8hf9pmhtv7ct/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/emguryanov/Library/Application Support/Code/1.68.1-main.sock
+VSCODE_IPC_HOOK = /Users/emguryanov/Library/Application Support/Code/1.71.0-main.sock
 # environment
-VSCODE_GIT_ASKPASS_NODE = /Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper
+MallocNanoZone = 0
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -141,11 +114,9 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 1.68.1
-# environment
 NVM_DIR = /Users/emguryanov/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.25597934.25597940.8971D784-B2C2-466B-9B03-2D99239A3290
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.36882637.36882643
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -154,8 +125,6 @@ XPC_SERVICE_NAME = application.com.microsoft.VSCode.25597934.25597940.8971D784-B
 __CF_USER_TEXT_ENCODING = 0x21AD9D9A:0x0:0x0
 # environment
 COMMAND_MODE = unix2003
-# environment
-GIT_ASKPASS = /Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh
 # default
 MAKEFILES := 
 # environment
@@ -164,8 +133,6 @@ RBENV_SHELL = zsh
 <F = $(notdir $<)
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a3
 # automatic
 ^F = $(notdir $^)
 # default
@@ -176,17 +143,14 @@ TEAMCITY_TOKEN = eyJ0eXAiOiAiVENWMiJ9.Tm83T0o4UVc5QzBDaDZ6aFFyV1RVbHI5ekIw.MWE4M
 PYENV_VIRTUALENV_INIT = 1
 # default
 .INCLUDE_DIRS = /usr/local/include
- 
 # environment
-VSCODE_GIT_IPC_HANDLE = /var/folders/m6/psv6n8c161x911l92y8hf9pmhtv7ct/T/vscode-git-29ad967e9d.sock
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 2157
+VSCODE_PID = 93792
 # variable set hash-table stats:
-# Load=85/1024=8%, Rehash=0, Collisions=5/106=5%
+# Load=67/1024=7%, Rehash=0, Collisions=3/88=3%
 
 # Pattern-specific Variable Values
 
@@ -194,7 +158,7 @@ VSCODE_PID = 2157
 
 # Directories
 
-# . (device 16777220, inode 13588055): 10 files, no impossibilities.
+# . (device 16777221, inode 13588055): 10 files, no impossibilities.
 
 # 10 files, no impossibilities in 1 directories.
 
@@ -268,6 +232,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sun Jun 26 22:39:42 2022
+# Finished Make data base on Sat Sep  3 21:23:34 2022
 
  

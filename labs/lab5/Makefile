@@ -367,5 +367,10 @@ install:  FORCE
 
 uninstall:  FORCE
 
+####### Report
+
+report:
+	cd docs && pandoc -o report.docx report.md --highlight-style haddock
+
 FORCE:
 
